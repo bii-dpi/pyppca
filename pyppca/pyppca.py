@@ -40,6 +40,8 @@ def ppca(Y, d, dia):
 
         Based on MATLAB code from J.J. VerBeek, 2006. http://lear.inrialpes.fr/~verbeek
     """
+    np.random.seed(12345)
+    
     N, D = shape(Y)  # N observations in D dimensions (i.e. D is number of features, N is samples)
     threshold = 1E-4  # minimal relative change in objective function to continue
     hidden = isnan(Y)
